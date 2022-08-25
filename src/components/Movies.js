@@ -45,7 +45,7 @@ const Movies = () => {
 				{movieGenre.results.map(result => (
 					<SplideSlide key={uuid_v4()}>
 						<div className="results-grid-child" key={uuid_v4()}>
-							<img src={`https://image.tmdb.org/t/p/w500/${result.backdrop_path}`} alt={result.title} />
+							<img src={`https://image.tmdb.org/t/p/w500/${result.backdrop_path}`} alt={result.title} width="auto" height="auto" />
 							<h2>{result.title}</h2>
                             <span>{result.overview}</span>
 						</div>
