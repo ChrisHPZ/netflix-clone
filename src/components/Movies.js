@@ -4,7 +4,6 @@ import useFetch from './useFetch';
 import { AiOutlineLike } from "react-icons/ai";
 
 const Movies = () => {
-  // Movie Discover API endpoint
   const mysteryEndpoint = "https://api.themoviedb.org/3/discover/movie?api_key=da2a6281e8d054013075e6e69b3c082c&with_genres=9648&append_to_response=images&include_image_language=en,null";
   const { slideDivRef, movieGenre } = useFetch(mysteryEndpoint);
   const [likeActive, setLikeActive] = useState(null);
