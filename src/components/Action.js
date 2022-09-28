@@ -3,16 +3,16 @@ import { useState } from 'react';
 import useFetch from './useFetch';
 import { AiOutlineLike } from "react-icons/ai";
 
-const Movies = () => {
+const Action = () => {  
   // Movie Discover API endpoint
-  const mysteryEndpoint = "https://api.themoviedb.org/3/discover/movie?api_key=da2a6281e8d054013075e6e69b3c082c&with_genres=9648&append_to_response=images&include_image_language=en,null";
-  const { slideDivRef, movieGenre } = useFetch(mysteryEndpoint);
+  const actionEndpoint = "https://api.themoviedb.org/3/discover/movie?api_key=da2a6281e8d054013075e6e69b3c082c&with_genres=28&append_to_response=images&include_image_language=en,null";  
+  const { slideDivRef, movieGenre } = useFetch(actionEndpoint);
   const [likeActive, setLikeActive] = useState(null);
   function overViewLimit (str, no_words) {
     return str.split(" ").splice(0,no_words).join(" ")
   }
   return ( 
-    <div className="container container-grid" id="movies">
+    <div className="container container-grid" id="Action">
       {movieGenre.results.map(result => (
         <div className="slider" key={uuid_v4()} ref={slideDivRef} aria-label={result.title}>
           <div className="actions">
@@ -34,5 +34,5 @@ const Movies = () => {
     </div>
   );
 }
- 
-export default Movies;
+
+export default Action;
