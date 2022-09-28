@@ -10,6 +10,7 @@ const useFetch = (url) => {
     if(effectRan.current === true) {
       axios.get(url).then((result) => {
         setMovieGenre(result.data)
+        console.log(result)
       })
     }
     return () => {
